@@ -1,0 +1,654 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "example"
+            qualifier(Type=Name): 
+                identifier: "com"
+    imports: 
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "ArrayList"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "false"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "Iterator"
+                qualifier(Type=Name): 
+                    identifier: "util"
+                    qualifier(Type=Name): 
+                        identifier: "java"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "Department"
+            comment(Type=JavadocComment): 
+                content: "\r\n * Department\r\n "
+            members: 
+                - member(Type=FieldDeclaration): 
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PRIVATE"
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "name"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=FieldDeclaration): 
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PRIVATE"
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "staffs"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "ArrayList"
+                                typeArguments: 
+                                    - typeArgument(Type=ClassOrInterfaceType): 
+                                        name(Type=SimpleName): 
+                                            identifier: "Staff"
+                - member(Type=ConstructorDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "setName"
+                                    scope(Type=ThisExpr): 
+                                    arguments: 
+                                        - argument(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "name"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "staffs"
+                                    value(Type=ObjectCreationExpr): 
+                                        type(Type=ClassOrInterfaceType): 
+                                            name(Type=SimpleName): 
+                                                identifier: "ArrayList"
+                    name(Type=SimpleName): 
+                        identifier: "Department"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "name"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "name"
+                                        scope(Type=ThisExpr): 
+                                    value(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "name"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "setName"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "name"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ReturnStmt): 
+                                expression(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "name"
+                    type(Type=ClassOrInterfaceType): 
+                        name(Type=SimpleName): 
+                            identifier: "String"
+                    name(Type=SimpleName): 
+                        identifier: "getName"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ReturnStmt): 
+                                expression(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "staffs"
+                    type(Type=ClassOrInterfaceType): 
+                        name(Type=SimpleName): 
+                            identifier: "ArrayList"
+                        typeArguments: 
+                            - typeArgument(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "Staff"
+                    name(Type=SimpleName): 
+                        identifier: "getStaffs"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "add"
+                                    scope(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "staffs"
+                                    arguments: 
+                                        - argument(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "staff"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "addStaff"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "staff"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "Staff"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "NOT_EQUALS"
+                                    left(Type=MethodCallExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "size"
+                                        scope(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "staffs"
+                                    right(Type=IntegerLiteralExpr): 
+                                        value: "0"
+                                elseStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "Staff list is empty"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=VariableDeclarationExpr): 
+                                                variables: 
+                                                    - variable(Type=VariableDeclarator): 
+                                                        initializer(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "iterator"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "staffs"
+                                                        name(Type=SimpleName): 
+                                                            identifier: "it"
+                                                        type(Type=ClassOrInterfaceType): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "Iterator"
+                                                            typeArguments: 
+                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "Staff"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=VariableDeclarationExpr): 
+                                                variables: 
+                                                    - variable(Type=VariableDeclarator): 
+                                                        initializer(Type=BooleanLiteralExpr): 
+                                                            value: "false"
+                                                        name(Type=SimpleName): 
+                                                            identifier: "exist"
+                                                        type(Type=PrimitiveType): 
+                                                            type: "BOOLEAN"
+                                        - statement(Type=WhileStmt): 
+                                            body(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "next"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "it"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "staff"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Staff"
+                                                    - statement(Type=IfStmt): 
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "equals"
+                                                            scope(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "getTitle"
+                                                                scope(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "getPosition"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staff"
+                                                            arguments: 
+                                                                - argument(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "toUpperCase"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "position"
+                                                        thenStmt(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "print"
+                                                                        scope(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "out"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "System"
+                                                                        arguments: 
+                                                                            - argument(Type=StringLiteralExpr): 
+                                                                                value: "The staff you're looking for is, "
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "println"
+                                                                        scope(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "out"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "System"
+                                                                        arguments: 
+                                                                            - argument(Type=MethodCallExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "toString"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "staff"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "exist"
+                                                                        value(Type=BooleanLiteralExpr): 
+                                                                            value: "true"
+                                                                - statement(Type=BreakStmt): 
+                                            condition(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "hasNext"
+                                                scope(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "it"
+                                        - statement(Type=IfStmt): 
+                                            condition(Type=UnaryExpr): 
+                                                operator: "LOGICAL_COMPLEMENT"
+                                                expression(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "exist"
+                                            thenStmt(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "println"
+                                                            scope(Type=FieldAccessExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "out"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "System"
+                                                            arguments: 
+                                                                - argument(Type=BinaryExpr): 
+                                                                    operator: "PLUS"
+                                                                    left(Type=BinaryExpr): 
+                                                                        operator: "PLUS"
+                                                                        left(Type=StringLiteralExpr): 
+                                                                            value: "Staff with the position: "
+                                                                        right(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "position"
+                                                                    right(Type=StringLiteralExpr): 
+                                                                        value: " does not exist"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "findStaffByPosition"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "position"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=IfStmt): 
+                                condition(Type=BinaryExpr): 
+                                    operator: "NOT_EQUALS"
+                                    left(Type=MethodCallExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "size"
+                                        scope(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "staffs"
+                                    right(Type=IntegerLiteralExpr): 
+                                        value: "0"
+                                elseStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "Staff list is empty"
+                                thenStmt(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=VariableDeclarationExpr): 
+                                                variables: 
+                                                    - variable(Type=VariableDeclarator): 
+                                                        initializer(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "iterator"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "staffs"
+                                                        name(Type=SimpleName): 
+                                                            identifier: "it"
+                                                        type(Type=ClassOrInterfaceType): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "Iterator"
+                                                            typeArguments: 
+                                                                - typeArgument(Type=ClassOrInterfaceType): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "Staff"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=VariableDeclarationExpr): 
+                                                variables: 
+                                                    - variable(Type=VariableDeclarator): 
+                                                        initializer(Type=BooleanLiteralExpr): 
+                                                            value: "false"
+                                                        name(Type=SimpleName): 
+                                                            identifier: "exist"
+                                                        type(Type=PrimitiveType): 
+                                                            type: "BOOLEAN"
+                                        - statement(Type=WhileStmt): 
+                                            body(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=VariableDeclarationExpr): 
+                                                            variables: 
+                                                                - variable(Type=VariableDeclarator): 
+                                                                    initializer(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "next"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "it"
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "staff"
+                                                                    type(Type=ClassOrInterfaceType): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "Staff"
+                                                    - statement(Type=IfStmt): 
+                                                        condition(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "equals"
+                                                            scope(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "getTitle"
+                                                                scope(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "getPosition"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staff"
+                                                            arguments: 
+                                                                - argument(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "toUpperCase"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "position"
+                                                        thenStmt(Type=BlockStmt): 
+                                                            statements: 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "println"
+                                                                        scope(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "out"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "System"
+                                                                        arguments: 
+                                                                            - argument(Type=StringLiteralExpr): 
+                                                                                value: "\\nStaff list before removing the specified staff: "
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "listStaffs"
+                                                                        scope(Type=ThisExpr): 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "println"
+                                                                        scope(Type=FieldAccessExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "out"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "System"
+                                                                        arguments: 
+                                                                            - argument(Type=StringLiteralExpr): 
+                                                                                value: "Staff list after removing staff"
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "remove"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "it"
+                                                                - statement(Type=IfStmt): 
+                                                                    condition(Type=BinaryExpr): 
+                                                                        operator: "NOT_EQUALS"
+                                                                        left(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "size"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "staffs"
+                                                                        right(Type=IntegerLiteralExpr): 
+                                                                            value: "0"
+                                                                    elseStmt(Type=ExpressionStmt): 
+                                                                        expression(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "println"
+                                                                            scope(Type=FieldAccessExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "out"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "System"
+                                                                            arguments: 
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "staffs"
+                                                                    thenStmt(Type=ExpressionStmt): 
+                                                                        expression(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "listStaffs"
+                                                                            scope(Type=ThisExpr): 
+                                                                - statement(Type=ExpressionStmt): 
+                                                                    expression(Type=AssignExpr): 
+                                                                        operator: "ASSIGN"
+                                                                        target(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "exist"
+                                                                        value(Type=BooleanLiteralExpr): 
+                                                                            value: "true"
+                                                                - statement(Type=BreakStmt): 
+                                            condition(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "hasNext"
+                                                scope(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "it"
+                                        - statement(Type=IfStmt): 
+                                            condition(Type=UnaryExpr): 
+                                                operator: "LOGICAL_COMPLEMENT"
+                                                expression(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "exist"
+                                            thenStmt(Type=BlockStmt): 
+                                                statements: 
+                                                    - statement(Type=ExpressionStmt): 
+                                                        expression(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "println"
+                                                            scope(Type=FieldAccessExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "out"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "System"
+                                                            arguments: 
+                                                                - argument(Type=BinaryExpr): 
+                                                                    operator: "PLUS"
+                                                                    left(Type=BinaryExpr): 
+                                                                        operator: "PLUS"
+                                                                        left(Type=StringLiteralExpr): 
+                                                                            value: "Staff with the position: "
+                                                                        right(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "position"
+                                                                    right(Type=StringLiteralExpr): 
+                                                                        value: " does not exist"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "removeStaffByPosition"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "position"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ForEachStmt): 
+                                body(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=MethodCallExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "toString"
+                                                        scope(Type=NameExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "staff"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                iterable(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "staffs"
+                                variable(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            name(Type=SimpleName): 
+                                                identifier: "staff"
+                                            type(Type=ClassOrInterfaceType): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "Staff"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "listStaffs"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...

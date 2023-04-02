@@ -1,0 +1,742 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "example"
+            qualifier(Type=Name): 
+                identifier: "com"
+    imports: 
+        - import(Type=ImportDeclaration): 
+            isAsterisk: "true"
+            isStatic: "false"
+            name(Type=Name): 
+                identifier: "util"
+                qualifier(Type=Name): 
+                    identifier: "java"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "StaffDeptPosition"
+            members: 
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "Scanner"
+                                                arguments: 
+                                                    - argument(Type=FieldAccessExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "in"
+                                                        scope(Type=NameExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "System"
+                                            name(Type=SimpleName): 
+                                                identifier: "scan"
+                                            type(Type=ClassOrInterfaceType): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "Scanner"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "print"
+                                    scope(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "out"
+                                        scope(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "System"
+                                    arguments: 
+                                        - argument(Type=StringLiteralExpr): 
+                                            value: "Enter the name of the department: "
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "toUpperCase"
+                                                scope(Type=MethodCallExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "nextLine"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "scan"
+                                            name(Type=SimpleName): 
+                                                identifier: "deptName"
+                                            type(Type=ClassOrInterfaceType): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "String"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=VariableDeclarationExpr): 
+                                    variables: 
+                                        - variable(Type=VariableDeclarator): 
+                                            initializer(Type=ObjectCreationExpr): 
+                                                type(Type=ClassOrInterfaceType): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "Department"
+                                                arguments: 
+                                                    - argument(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "deptName"
+                                            name(Type=SimpleName): 
+                                                identifier: "department"
+                                            type(Type=ClassOrInterfaceType): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "Department"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "println"
+                                    scope(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "out"
+                                        scope(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "System"
+                                    arguments: 
+                                        - argument(Type=BinaryExpr): 
+                                            operator: "PLUS"
+                                            left(Type=BinaryExpr): 
+                                                operator: "PLUS"
+                                                left(Type=StringLiteralExpr): 
+                                                    value: "WELCOME TO "
+                                                right(Type=MethodCallExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "getName"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "department"
+                                            right(Type=StringLiteralExpr): 
+                                                value: " STAFF POSITION DEPARTMENT MANAGER"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "println"
+                                    scope(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "out"
+                                        scope(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "System"
+                                    arguments: 
+                                        - argument(Type=StringLiteralExpr): 
+                                            value: "_______________________________________________"
+                            - statement(Type=WhileStmt): 
+                                body(Type=BlockStmt): 
+                                    statements: 
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "\\nMenu Options"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "============"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(1) - to add"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(2) - to find"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(3) - to list staff"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(4) - to remove staff"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(5) - to clear all the staffs"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "println"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "(6) - to quit"
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=MethodCallExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "print"
+                                                scope(Type=FieldAccessExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "out"
+                                                    scope(Type=NameExpr): 
+                                                        name(Type=SimpleName): 
+                                                            identifier: "System"
+                                                arguments: 
+                                                    - argument(Type=StringLiteralExpr): 
+                                                        value: "Enter choice: "
+                                        - statement(Type=ExpressionStmt): 
+                                            expression(Type=VariableDeclarationExpr): 
+                                                variables: 
+                                                    - variable(Type=VariableDeclarator): 
+                                                        initializer(Type=MethodCallExpr): 
+                                                            name(Type=SimpleName): 
+                                                                identifier: "nextInt"
+                                                            scope(Type=NameExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "scan"
+                                                        name(Type=SimpleName): 
+                                                            identifier: "choice"
+                                                        type(Type=PrimitiveType): 
+                                                            type: "INT"
+                                        - statement(Type=SwitchStmt): 
+                                            selector(Type=NameExpr): 
+                                                name(Type=SimpleName): 
+                                                    identifier: "choice"
+                                            entries: 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    comment(Type=BlockComment): 
+                                                        content: " case for adding staff to the department "
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "1"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter Name: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "nextLine"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "scan"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "toUpperCase"
+                                                                            scope(Type=MethodCallExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "nextLine"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "name"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "String"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter Age: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "nextInt"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "age"
+                                                                        type(Type=PrimitiveType): 
+                                                                            type: "INT"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "nextLine"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "scan"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter Email: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "nextLine"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "email"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "String"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter the title of position: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "toUpperCase"
+                                                                            scope(Type=MethodCallExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "nextLine"
+                                                                                scope(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "title"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "String"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter the salary: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "nextDouble"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "salary"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "Double"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=ObjectCreationExpr): 
+                                                                            type(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Position"
+                                                                            arguments: 
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "title"
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "salary"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "position"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "Position"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=ObjectCreationExpr): 
+                                                                            type(Type=ClassOrInterfaceType): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "Staff"
+                                                                            arguments: 
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "name"
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "age"
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "email"
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "department"
+                                                                                - argument(Type=NameExpr): 
+                                                                                    name(Type=SimpleName): 
+                                                                                        identifier: "position"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staff"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "Staff"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "addStaff"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "department"
+                                                                arguments: 
+                                                                    - argument(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staff"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    comment(Type=BlockComment): 
+                                                        content: " case for finding a staff\r\n                     * We find by position assuming no two staff have the same position.\r\n                     * We can also find by salary, name, email etc, just showing basic functionality here\r\n                     "
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "2"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter position of staff: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "nextLine"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "scan"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "nextLine"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staffPosition"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "String"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "findStaffByPosition"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "department"
+                                                                arguments: 
+                                                                    - argument(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staffPosition"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    comment(Type=BlockComment): 
+                                                        content: " case lists all the staffs in the department "
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "3"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "listStaffs"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "department"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    comment(Type=BlockComment): 
+                                                        content: " case for removing a staff\r\n                     * We remove by position with the same assumption mentioned above.\r\n                     * We can also remove by salary, name, email etc, just showing basic functionality here\r\n                    "
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "4"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Enter the position of the staff want to remove: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "nextLine"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "scan"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=VariableDeclarationExpr): 
+                                                                variables: 
+                                                                    - variable(Type=VariableDeclarator): 
+                                                                        initializer(Type=MethodCallExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "nextLine"
+                                                                            scope(Type=NameExpr): 
+                                                                                name(Type=SimpleName): 
+                                                                                    identifier: "scan"
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staffRemPosition"
+                                                                        type(Type=ClassOrInterfaceType): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "String"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "removeStaffByPosition"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "department"
+                                                                arguments: 
+                                                                    - argument(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "staffRemPosition"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    comment(Type=BlockComment): 
+                                                        content: " case for removing all the staff from the department "
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "5"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "clear"
+                                                                scope(Type=MethodCallExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "getStaffs"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "department"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "print"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "Staff list is now empty: "
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "println"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=MethodCallExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "getStaffs"
+                                                                        scope(Type=NameExpr): 
+                                                                            name(Type=SimpleName): 
+                                                                                identifier: "department"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    labels: 
+                                                        - label(Type=IntegerLiteralExpr): 
+                                                            value: "6"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "println"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "We hope to See you again!"
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "exit"
+                                                                scope(Type=NameExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=IntegerLiteralExpr): 
+                                                                        value: "0"
+                                                        - statement(Type=BreakStmt): 
+                                                - entrie(Type=SwitchEntry): 
+                                                    type: "STATEMENT_GROUP"
+                                                    statements: 
+                                                        - statement(Type=ExpressionStmt): 
+                                                            expression(Type=MethodCallExpr): 
+                                                                name(Type=SimpleName): 
+                                                                    identifier: "println"
+                                                                scope(Type=FieldAccessExpr): 
+                                                                    name(Type=SimpleName): 
+                                                                        identifier: "out"
+                                                                    scope(Type=NameExpr): 
+                                                                        name(Type=SimpleName): 
+                                                                            identifier: "System"
+                                                                arguments: 
+                                                                    - argument(Type=StringLiteralExpr): 
+                                                                        value: "invalid option"
+                                condition(Type=BooleanLiteralExpr): 
+                                    value: "true"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "main"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                        - modifier(Type=Modifier): 
+                            keyword: "STATIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "args"
+                            type(Type=ArrayType): 
+                                origin: "TYPE"
+                                componentType(Type=ClassOrInterfaceType): 
+                                    name(Type=SimpleName): 
+                                        identifier: "String"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...

@@ -1,0 +1,192 @@
+---
+root(Type=CompilationUnit): 
+    packageDeclaration(Type=PackageDeclaration): 
+        name(Type=Name): 
+            identifier: "example"
+            qualifier(Type=Name): 
+                identifier: "com"
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "Position"
+            members: 
+                - member(Type=FieldDeclaration): 
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PRIVATE"
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "title"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=FieldDeclaration): 
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PRIVATE"
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "salary"
+                            type(Type=PrimitiveType): 
+                                type: "DOUBLE"
+                - member(Type=ConstructorDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "setTitle"
+                                    scope(Type=ThisExpr): 
+                                    arguments: 
+                                        - argument(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "title"
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=MethodCallExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "setSalary"
+                                    scope(Type=ThisExpr): 
+                                    arguments: 
+                                        - argument(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "salary"
+                    name(Type=SimpleName): 
+                        identifier: "Position"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "title"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "salary"
+                            type(Type=PrimitiveType): 
+                                type: "DOUBLE"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "title"
+                                        scope(Type=ThisExpr): 
+                                    value(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "title"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "setTitle"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "title"
+                            type(Type=ClassOrInterfaceType): 
+                                name(Type=SimpleName): 
+                                    identifier: "String"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ExpressionStmt): 
+                                expression(Type=AssignExpr): 
+                                    operator: "ASSIGN"
+                                    target(Type=FieldAccessExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "salary"
+                                        scope(Type=ThisExpr): 
+                                    value(Type=NameExpr): 
+                                        name(Type=SimpleName): 
+                                            identifier: "salary"
+                    type(Type=VoidType): 
+                    name(Type=SimpleName): 
+                        identifier: "setSalary"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                    parameters: 
+                        - parameter(Type=Parameter): 
+                            isVarArgs: "false"
+                            name(Type=SimpleName): 
+                                identifier: "salary"
+                            type(Type=PrimitiveType): 
+                                type: "DOUBLE"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ReturnStmt): 
+                                expression(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "title"
+                    type(Type=ClassOrInterfaceType): 
+                        name(Type=SimpleName): 
+                            identifier: "String"
+                    name(Type=SimpleName): 
+                        identifier: "getTitle"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ReturnStmt): 
+                                expression(Type=NameExpr): 
+                                    name(Type=SimpleName): 
+                                        identifier: "salary"
+                    type(Type=PrimitiveType): 
+                        type: "DOUBLE"
+                    name(Type=SimpleName): 
+                        identifier: "getSalary"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+                - member(Type=MethodDeclaration): 
+                    body(Type=BlockStmt): 
+                        statements: 
+                            - statement(Type=ReturnStmt): 
+                                expression(Type=BinaryExpr): 
+                                    operator: "PLUS"
+                                    left(Type=BinaryExpr): 
+                                        operator: "PLUS"
+                                        left(Type=BinaryExpr): 
+                                            operator: "PLUS"
+                                            left(Type=BinaryExpr): 
+                                                operator: "PLUS"
+                                                left(Type=StringLiteralExpr): 
+                                                    value: "Position [title: "
+                                                right(Type=NameExpr): 
+                                                    name(Type=SimpleName): 
+                                                        identifier: "title"
+                                            right(Type=StringLiteralExpr): 
+                                                value: ", salary: "
+                                        right(Type=NameExpr): 
+                                            name(Type=SimpleName): 
+                                                identifier: "salary"
+                                    right(Type=StringLiteralExpr): 
+                                        value: "]"
+                    type(Type=ClassOrInterfaceType): 
+                        name(Type=SimpleName): 
+                            identifier: "String"
+                    name(Type=SimpleName): 
+                        identifier: "toString"
+                    modifiers: 
+                        - modifier(Type=Modifier): 
+                            keyword: "PUBLIC"
+            modifiers: 
+                - modifier(Type=Modifier): 
+                    keyword: "PUBLIC"
+...
